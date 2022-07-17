@@ -3,6 +3,7 @@ import com.example.demo.entities.Course;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CourseServiceImpl implements CourseService{
@@ -36,5 +37,10 @@ public class CourseServiceImpl implements CourseService{
     public Course addourse(Course course) {
         list.add(course);
         return course;
+    }
+
+    @Override
+    public void deleteCourse(long parseLong){
+        list = this.list.stream().filter(e->e.getId()!=parseLong).collect(Collectors.toList());
     }
 }

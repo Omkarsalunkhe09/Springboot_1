@@ -1,6 +1,6 @@
 package com.example.demo.entities;
 
-public class Course {
+public  class Course {
 
   private long id;
   private String title;
@@ -30,7 +30,7 @@ public class Course {
     this.description = description;
   }
 
-  public Course(long id, String title, String description) {
+  public  Course(long id, String title, String description) {
 
     this.id = id;
     this.title = title;
